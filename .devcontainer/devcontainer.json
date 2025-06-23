@@ -1,0 +1,19 @@
+    {
+      "name": "Xcode Development Pojav Launcher",
+      "image": "mcr.microsoft.com/devcontainers/universal:2", // Or a more specific image
+      "features": {
+        "ghcr.io/devcontainers/features/common-utils:1": {},
+        "ghcr.io/devcontainers/features/xcode:1": {}
+      },
+       "customizations": {
+        "vscode": {
+          "extensions": [
+            "Xcode.xcode-cloud" // Or other extensions
+          ]
+        }
+      },
+      "postCreateCommand": [
+        "sudo xcode-select -switch /Applications/Xcode_15.2.app", // Adjust version
+        "xcodebuild -version"
+      ]
+    }
